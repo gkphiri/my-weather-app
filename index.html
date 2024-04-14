@@ -15,21 +15,28 @@
   <body>
     <div class="weather-app">
       <header>
-        <form action="">
-          <input type="search" placeholder="Enter City.." required />
-          <input type="submit" value="search" />
+        <form class="search-form">
+          <input
+            type="search"
+            placeholder="Enter City.."
+            required
+            class="search-form-input"
+          />
+          <input type="submit" value="search" class="search-button" />
         </form>
       </header>
       <main>
-        <div>
-          <h1>Pari</h1>
-          <p>
-            Sunday 14:48, scattered clouds
-            <br />
-            Humidity: 66%, Wind: 3.13km/h
-          </p>
+        <div class="weather-app-data">
+          <div>
+            <h1 class="weather-app-city">Paris</h1>
+            <p class="weather-app-details">
+              Sunday 14:48, scattered clouds
+              <br />
+              Humidity: <strong>66%</strong>, Wind: <strong>3.13km/h</strong>
+            </p>
+          </div>
+          <div class="weather-app-temerature">⛅ 12°C</div>
         </div>
-        <div>⛅ 12°C</div>
       </main>
       <footer>
         Coded by
