@@ -20,15 +20,16 @@ header {
   background-color: #f9f7fe;
   border: none;
   border-radius: 6px;
-  width: 60%;
+  width: 75%;
   padding: 15px 20px;
 }
 .search-button {
   background: #885df1;
   border: none;
+  border-radius: 6px;
   padding: 15px 20px;
   font-size: 16px;
-  margin-left: 20px;
+  margin-left: 10px;
   color: white;
 }
 main {
@@ -51,6 +52,22 @@ main {
 }
 .weather-app-details strong {
   color: #f65282;
+}
+.weather-app-temperature-container {
+  display: flex;
+}
+.weather-app-icon {
+  font-size: 34px;
+  margin-top: 22px;
+}
+.weather-app-temperature {
+  font-size: 88px;
+  margin-left: 10px;
+  font-weight: 200;
+}
+.weather-app-unit {
+  margin-top: 16px;
+  font-size: 28px;
 }
 footer {
   border-top: 1px solid #f9f7fe;
