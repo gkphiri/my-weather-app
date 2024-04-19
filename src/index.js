@@ -2,8 +2,17 @@ function refreshWeather(response) {
   let temperatureElement = document.querySelector("#temperature");
   let temperature = response.data.temperature.current;
   let cityElement = document.querySelector("#city");
+  let descriptionElement = document.querySelector("#description");
+  let humidityElement = document.querySelector("#humidity");
+  let windSpeedElement = document.querySelector("#wind-speed");
+  let timeElement = document.querySelector("#time");
+  let date = newDate(response.data.tme * 1000);
 
   cityElement.innerHTML = response.data.city;
+  descriptionElement.innerHTML = response.data.condition.description;
+  humidityElement.innerHTML = `${response.data.temperature.humidty}%`;
+  windSpeedElement.innerHTML = `${response.data.wind.speed}km/h`;
+  timeElement.innerHTML = FormDate(date);
   temperatureElement.innerHTML = Math.round(temperature);
 }
 
@@ -15,8 +24,6 @@ function search(event) {
 function handleSearchSubmit(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#search-form-input");
-
-  searchCity(searchInput.value);
 }
 let searchInput = document.querySelector("#search-form");
 searchInput.addEventListener("submit", handleSearchSubmit);
