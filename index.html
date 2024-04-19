@@ -21,7 +21,7 @@
             type="search"
             placeholder="Enter City.."
             required
-            id="search-form-input"
+            id="search-input"
             class="search-form-input"
           />
           <input type="submit" value="search" class="search-button" />
@@ -30,11 +30,12 @@
       <main>
         <div class="weather-app-data">
           <div>
-            <h1 class="weather-app-city" id="City"></h1>
+            <h1 class="weather-app-city" id="city"></h1>
             <p class="weather-app-details">
-              Sunday 14:48, scattered clouds
+              Sunday 14:48, <span id="description">scattered clouds</span>
               <br />
-              Humidity: <strong>66%</strong>, Wind: <strong>3.13km/h</strong>
+              Humidity: <strong id="humidity"></strong>, Wind:
+              <strong>3.13km/h</strong>
             </p>
           </div>
           <div class="weather-app-temperature-container">
