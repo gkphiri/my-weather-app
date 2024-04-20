@@ -6,20 +6,20 @@ function refreshWeather(response) {
   let humidityElement = document.querySelector("#humidity");
   let windSpeedElement = document.querySelector("#wind-speed");
   let timeElement = document.querySelector("#time");
-  let date = new Date(response.data.tme * 1000);
+  let date = new Date(response.data.time * 1000);
   let iconElement = document.querySelector("#icon");
 
   cityElement.innerHTML = response.data.city;
   descriptionElement.innerHTML = response.data.condition.description;
-  humidityElement.innerHTML = `${response.data.temperature.humidty}%`;
+  humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
   windSpeedElement.innerHTML = `${response.data.wind.speed}km/h`;
-  timeElement.innerHTML = FormatDate(date);
+  timeElement.innerHTML = formatDate(date);
   temperatureElement.innerHTML = Math.round(temperature);
   iconElement.innerHTML = `<img
                 src="${response.data.condition.icon_url}"
                 class="weather-app-icon"/>`;
 }
-function FormatDate(date) {
+function formatDate(date) {
   let minutes = date.getMinutes();
   let hours = date.getHours();
   let days = [
@@ -48,9 +48,9 @@ function searchCity(city) {
 }
 function handleSearchSubmit(event) {
   event.preventDefault();
-  let searchFormInput = document.querySelector("#search-form-input");
+  let searchInput = document.querySelector("#search-form-input");
 }
-let searchInput = document.querySelector("#search-form");
-searchInput.addEventListener("submit", handleSearchSubmit);
+let searchFormElement = document.querySelector("#search-form");
+searchFormElement.addEventListener("submit", handleSearchSubmit);
 
 searchCity("Paris");
