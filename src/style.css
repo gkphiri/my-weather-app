@@ -60,6 +60,10 @@ main {
   width: 88px;
   height: 88px;
 }
+.weather-forecast-icon {
+  width: 60px;
+  height: 60px;
+}
 .weather-app-temperature {
   font-size: 88px;
   line-height: 88px;
