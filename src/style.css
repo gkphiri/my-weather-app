@@ -86,15 +86,14 @@ footer {
 .weather-forecast {
   display: flex;
   margin-top: 150px;
-  justify-content: space-around;
   position: absolute;
-  text-align: center;
+  justify-content: space-around;
 }
 .weather-forecast-date {
   text-align: center;
   color: rgba(39, 33, 66, 0.4);
   font-size: 16px;
-  line-height: 10px;
+  line-height: 20px;
   margin-bottom: 10px;
 }
 .weather-forecast-temperature-min {
