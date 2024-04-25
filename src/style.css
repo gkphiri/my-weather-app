@@ -38,7 +38,6 @@ main {
 .weather-app-data {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 120px;
 }
 .weather-app-city {
   margin: 0;
@@ -85,8 +84,7 @@ footer {
 }
 .weather-forecast {
   display: flex;
-  margin-top: 150px;
-  position: absolute;
+  margin-top: 30px;
   justify-content: space-around;
 }
 .weather-forecast-date {
